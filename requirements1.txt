@@ -1,13 +1,3 @@
-Flask==2.3.2
-Flask-Cors==4.0.0
-Flask-Session==0.8.0
-transformers==4.39.3
-torch>=1.10.0
-bcrypt==4.1.2
-python-dotenv==1.0.1
-SQLAlchemy==2.0.30
-
-# psycopg2-binary==2.9.9  # if using PostgreSQL, otherwise use `mysqlclient` or `sqlite`
 transformers
 transformers[sentencepiece]
 datasets

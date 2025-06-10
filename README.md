@@ -12,6 +12,8 @@
 7. Update the main.py
 8. Update the app.py
 
+first we created template file, created a virtual environment, added required libraries in requirements.txt
+
 In a text summarization project, data ingestion refers to the process of gathering, downloading, and preparing the raw text data that will be used for training or testing the summarization model.
 
 here steps are data source identification, data download, local storage, unzipping and extraction, structure and format.

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Summarizer</title>
+</head>
+<body>
+    <h1>Text Summarizer</h1>
+    <form method="POST">
+        <textarea name="input_text" rows="8" cols="80" placeholder="Enter text here..." required>{{ input_text or '' }}</textarea><br>
+        <label><input type="radio" name="summary_type" value="short" {% if summary_type == 'short' %}checked{% endif %}> Short</label>
+        <label><input type="radio" name="summary_type" value="long" {% if summary_type == 'long' %}checked{% endif %}> Long</label><br>
+        <button type="submit">Summarize</button>
+    </form>
+    {% if summary %}
+        <h2>Summary ({{ summary_type.title() }}):</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+    <a href="/records">View Saved Summaries</a>
+</body>
+</html>

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+--summary-primary: #6366f1;
+--summary-primary-hover: #4f46e5;
+--summary-text: #333333;
+--summary-bg: #ffffff;
+--summary-accent: #fff176;
+--summary-error: #ef4444;
+--summary-border: #e0e0e0;
+--summary-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+--summary-input-bg: #f9fafb;
+}
+
+body {
+margin: 0;
+padding: 0;
+background-color: #f5f7fb;
+}
+.summary-container {
+font-family: 'Poppins', sans-serif;
+width: 100%;
+max-width: 1000px;
+margin: 5rem auto 3rem;
+padding: 0 1rem;
+box-sizing: border-box;
+}
+.summary-card {
+background-color: var(--summary-bg);
+border-radius: 1rem;
+box-shadow: var(--summary-shadow);
+padding: 2.5rem;
+transition: all 0.3s ease;
+width: 100%;
+border-top: 4px solid var(--summary-primary);
+}
+.summary-header {
+margin-bottom: 2rem;
+padding-bottom: 1rem;
+border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+display: flex;
+align-items: center;
+}
+.summary-header h2 {
+color: var(--summary-primary);
+font-size: 1.75rem;
+font-weight: 600;
+margin: 0;
+letter-spacing: -0.5px;
+}
+.summary-form {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+width: 100%;
+}
+.summary-label {
+font-weight: 500;
+font-size: 1rem;
+color: var(--summary-text);
+margin-bottom: 0.5rem;
+display: block;
+}
+.summary-textarea {
+font-family: 'Poppins', sans-serif;
+width: 100%;
+padding: 1rem 1.25rem;
+background-color: var(--summary-input-bg);
+border: 1px solid var(--summary-border);
+border-radius: 0.5rem;
+font-size: 1rem;
+resize: vertical;
+transition: all 0.3s ease;
+min-height: 150px;
+box-sizing: border-box;
+color: var(--summary-text);
+}
+.summary-textarea:focus {
+outline: none;
+border-color: var(--summary-primary);
+box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+.summary-textarea::placeholder {
+color: var(--summary-text);
+opacity: 0.8;
+}
+.summary-type-group {
+margin-top: 0.75rem;
+width: 100%;
+}
+.summary-type-label {
+font-weight: 500;
+font-size: 1rem;
+color: var(--summary-text);
+margin-bottom: 1rem;
+display: block;
+}
+.summary-radio-group {
+display: flex;
+gap: 2rem;
+}
+.summary-radio-option {
+display: flex;
+align-items: center;
+gap: 0.625rem;
+}
+.summary-radio-input {
+appearance: none;
+width: 1.25rem;
+height: 1.25rem;
+border: 2px solid var(--summary-primary);
+border-radius: 50%;
+transition: all 0.2s ease;
+position: relative;
+cursor: pointer;
+}
+.summary-radio-input:checked {
+background-color: var(--summary-primary);
+border-color: var(--summary-primary);
+}
+.summary-radio-input:checked::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 0.5rem;
+height: 0.5rem;
+border-radius: 50%;
+background-color: white;
+}
+.summary-radio-input:focus {
+outline: none;
+box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+.summary-radio-label {
+font-size: 1rem;
+color: var(--summary-text);
+cursor: pointer;
+font-weight: 500;
+}
+.summary-button {
+background-color: var(--summary-primary);
+color: white;
+border: none;
+border-radius: 0.5rem;
+padding: 0.875rem 2rem;
+font-weight: 600;
+font-size: 1rem;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-top: 1rem;
+width: 100%;
+max-width: 250px;
+align-self: flex-end;
+letter-spacing: 0.5px;
+box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.25);
+}
+.summary-button:hover {
+background-color: var(--summary-primary-hover);
+transform: translateY(-2px);
+box-shadow: 0 6px 8px -1px rgba(99, 102, 241, 0.3);
+}
+.summary-button:focus {
+outline: none;
+box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+.summary-button:disabled {
+opacity: 0.7;
+cursor: not-allowed;
+transform: none;
+box-shadow: none;
+}
+.summary-error {
+background-color: rgba(239, 68, 68, 0.1);
+color: var(--summary-error);
+padding: 1rem 1.25rem;
+border-radius: 0.5rem;
+font-size: 0.95rem;
+margin-bottom: 1.5rem;
+border-left: 4px solid var(--summary-error);
+width: 100%;
+box-sizing: border-box;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+.summary-container {
+margin-top: 7rem;
+padding: 0 1rem;
+}
+.summary-card {
+padding: 1.5rem;
+}
+.summary-radio-group {
+flex-direction: column;
+gap: 1rem;
+}
+.summary-button {
+max-width: 100%;
+}
+}

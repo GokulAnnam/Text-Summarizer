@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary Records</title>
+</head>
+<body>
+    <h1>Saved Summaries</h1>
+    {% for r in records %}
+        <div style="margin-bottom: 20px;">
+            <strong>{{ r.created_at }} ({{ r.summary_type.upper() }})</strong><br>
+            <b>Input:</b> {{ r.input_text }}<br>
+            <b>Summary:</b> {{ r.summary_text }}
+        </div>
+    {% else %}
+        <p>No summaries stored yet.</p>
+    {% endfor %}
+    <a href="/">← Back to Summarizer</a>
+</body>
+</html>
